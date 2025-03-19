@@ -47,14 +47,30 @@
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
                   <PropertyValue z:Id="i10">
-                    <PropertyName>MaxItems</PropertyName>
+                    <PropertyName>SinceDate</PropertyName>
                     <_dataType>Expression</_dataType>
-                    <_expression>1</_expression>
+                    <_expression>@"19.03.2025 01:01:01"</_expression>
                     <_screenShotBase64 i:nil="true" />
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
                   <PropertyValue z:Id="i11">
+                    <PropertyName>ToDate</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>@"20.03.2025 12:12:12"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i12">
+                    <PropertyName>MaxItems</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>5</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i13">
                     <PropertyName>Messages</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>listacorreos</_expression>
@@ -71,14 +87,14 @@
                 <Text>Recibe Correos</Text>
                 <_activityFullName>Activities.Email.GetIMapMailMessages</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i12" i:type="ExecutedStep">
+              <AbstractStep z:Id="i14" i:type="ExecutedStep">
                 <Childs>
-                  <AbstractStep z:Id="i13" i:type="ExecutedStep">
+                  <AbstractStep z:Id="i15" i:type="ExecutedStep">
                     <Childs />
                     <Id>ac8e8eb3-4044-4928-a86c-597b1119b375</Id>
-                    <Parent z:Ref="i12" />
+                    <Parent z:Ref="i14" />
                     <PropertyValues>
-                      <PropertyValue z:Id="i14">
+                      <PropertyValue z:Id="i16">
                         <PropertyName>Value</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>mail.Subject.ToString()</_expression>
@@ -86,7 +102,7 @@
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i15">
+                      <PropertyValue z:Id="i17">
                         <PropertyName>To</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>titulo</_expression>
@@ -103,12 +119,12 @@
                     <Text>Traemos Titulo</Text>
                     <_activityFullName>BR.Core.Base.Assign</_activityFullName>
                   </AbstractStep>
-                  <AbstractStep z:Id="i16" i:type="ExecutedStep">
+                  <AbstractStep z:Id="i18" i:type="ExecutedStep">
                     <Childs />
                     <Id>deb88e7d-f1c5-499f-9aa5-09ae6d04409a</Id>
-                    <Parent z:Ref="i12" />
+                    <Parent z:Ref="i14" />
                     <PropertyValues>
-                      <PropertyValue z:Id="i17">
+                      <PropertyValue z:Id="i19">
                         <PropertyName>Value</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>mail.TextBody.ToString()</_expression>
@@ -116,7 +132,7 @@
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i18">
+                      <PropertyValue z:Id="i20">
                         <PropertyName>To</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>cuerpo</_expression>
@@ -133,16 +149,16 @@
                     <Text>Traemos Cuerpo</Text>
                     <_activityFullName>BR.Core.Base.Assign</_activityFullName>
                   </AbstractStep>
-                  <AbstractStep z:Id="i19" i:type="ExecutedStep">
+                  <AbstractStep z:Id="i21" i:type="ExecutedStep">
                     <Childs>
-                      <AbstractStep z:Id="i20" i:type="ExecutedStep">
+                      <AbstractStep z:Id="i22" i:type="ExecutedStep">
                         <Childs>
-                          <AbstractStep z:Id="i21" i:type="ExecutedStep">
+                          <AbstractStep z:Id="i23" i:type="ExecutedStep">
                             <Childs />
                             <Id>b80dc1ca-93ef-4951-9ae1-7931ee0084aa</Id>
-                            <Parent z:Ref="i20" />
+                            <Parent z:Ref="i22" />
                             <PropertyValues>
-                              <PropertyValue z:Id="i22">
+                              <PropertyValue z:Id="i24">
                                 <PropertyName>NewFolderPath</PropertyName>
                                 <_dataType>Expression</_dataType>
                                 <_expression>@$"correo {i}"</_expression>
@@ -159,12 +175,12 @@
                             <Text></Text>
                             <_activityFullName>Activities.Files.CreateFolder</_activityFullName>
                           </AbstractStep>
-                          <AbstractStep z:Id="i23" i:type="ExecutedStep">
+                          <AbstractStep z:Id="i25" i:type="ExecutedStep">
                             <Childs />
                             <Id>4732ea9b-49ce-44c0-9499-0abbcba44be1</Id>
-                            <Parent z:Ref="i20" />
+                            <Parent z:Ref="i22" />
                             <PropertyValues>
-                              <PropertyValue z:Id="i24">
+                              <PropertyValue z:Id="i26">
                                 <PropertyName>Value</PropertyName>
                                 <_dataType>Expression</_dataType>
                                 <_expression>"TITULO:\n" + titulo + "\nMENSAJE:\n" + cuerpo </_expression>
@@ -172,7 +188,7 @@
                                 <_value i:nil="true" />
                                 <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                               </PropertyValue>
-                              <PropertyValue z:Id="i25">
+                              <PropertyValue z:Id="i27">
                                 <PropertyName>To</PropertyName>
                                 <_dataType>Expression</_dataType>
                                 <_expression>mensaje</_expression>
@@ -189,12 +205,12 @@
                             <Text>Concatenamos</Text>
                             <_activityFullName>BR.Core.Base.Assign</_activityFullName>
                           </AbstractStep>
-                          <AbstractStep z:Id="i26" i:type="ExecutedStep">
+                          <AbstractStep z:Id="i28" i:type="ExecutedStep">
                             <Childs />
                             <Id>9e3eca68-625d-4318-98ad-7391df16cd2c</Id>
-                            <Parent z:Ref="i20" />
+                            <Parent z:Ref="i22" />
                             <PropertyValues>
-                              <PropertyValue z:Id="i27">
+                              <PropertyValue z:Id="i29">
                                 <PropertyName>FilePath</PropertyName>
                                 <_dataType>Expression</_dataType>
                                 <_expression>@$"correo {i}\informacion{i}.txt"</_expression>
@@ -202,7 +218,7 @@
                                 <_value i:nil="true" />
                                 <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                               </PropertyValue>
-                              <PropertyValue z:Id="i28">
+                              <PropertyValue z:Id="i30">
                                 <PropertyName>Text</PropertyName>
                                 <_dataType>Expression</_dataType>
                                 <_expression>mensaje</_expression>
@@ -219,12 +235,12 @@
                             <Text>Escribimos los documentos</Text>
                             <_activityFullName>Activities.Files.WriteFile</_activityFullName>
                           </AbstractStep>
-                          <AbstractStep z:Id="i29" i:type="ExecutedStep">
+                          <AbstractStep z:Id="i31" i:type="ExecutedStep">
                             <Childs />
                             <Id>0d874034-cec4-41c8-a797-ff23b990f63c</Id>
-                            <Parent z:Ref="i20" />
+                            <Parent z:Ref="i22" />
                             <PropertyValues>
-                              <PropertyValue z:Id="i30">
+                              <PropertyValue z:Id="i32">
                                 <PropertyName>MimeMessage</PropertyName>
                                 <_dataType>Expression</_dataType>
                                 <_expression>mail</_expression>
@@ -232,7 +248,7 @@
                                 <_value i:nil="true" />
                                 <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                               </PropertyValue>
-                              <PropertyValue z:Id="i31">
+                              <PropertyValue z:Id="i33">
                                 <PropertyName>Folder</PropertyName>
                                 <_dataType>Expression</_dataType>
                                 <_expression>@$"correo {i}"</_expression>
@@ -240,7 +256,7 @@
                                 <_value i:nil="true" />
                                 <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                               </PropertyValue>
-                              <PropertyValue z:Id="i32">
+                              <PropertyValue z:Id="i34">
                                 <PropertyName>Count</PropertyName>
                                 <_dataType>Expression</_dataType>
                                 <_expression></_expression>
@@ -259,7 +275,7 @@
                           </AbstractStep>
                         </Childs>
                         <Id>a72eef80-c3bd-420d-ae37-1c4ead4a31af</Id>
-                        <Parent z:Ref="i19" />
+                        <Parent z:Ref="i21" />
                         <PropertyValues />
                         <SelectedOptionId i:nil="true" />
                         <AutoCloseMode>None</AutoCloseMode>
@@ -269,10 +285,10 @@
                         <Text></Text>
                         <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
                       </AbstractStep>
-                      <AbstractStep z:Id="i33" i:type="ExecutedStep">
+                      <AbstractStep z:Id="i35" i:type="ExecutedStep">
                         <Childs />
                         <Id>e920b4df-94f9-48d3-876d-9e5c40eae8de</Id>
-                        <Parent z:Ref="i19" />
+                        <Parent z:Ref="i21" />
                         <PropertyValues />
                         <SelectedOptionId i:nil="true" />
                         <AutoCloseMode>None</AutoCloseMode>
@@ -284,9 +300,9 @@
                       </AbstractStep>
                     </Childs>
                     <Id>75fe49da-cc73-4b6c-a7c0-32ee97697b37</Id>
-                    <Parent z:Ref="i12" />
+                    <Parent z:Ref="i14" />
                     <PropertyValues>
-                      <PropertyValue z:Id="i34">
+                      <PropertyValue z:Id="i36">
                         <PropertyName>Condition</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>titulo.Contains("hoja")</_expression>
@@ -307,7 +323,7 @@
                 <Id>5f9e1098-a236-45de-9f31-b1e107ca5e9c</Id>
                 <Parent z:Ref="i4" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i35">
+                  <PropertyValue z:Id="i37">
                     <PropertyName>Collection</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>listacorreos</_expression>
@@ -315,7 +331,7 @@
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i36">
+                  <PropertyValue z:Id="i38">
                     <PropertyName>Iterator</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>mail</_expression>
@@ -323,7 +339,7 @@
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i37">
+                  <PropertyValue z:Id="i39">
                     <PropertyName>Counter</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>i</_expression>
@@ -352,14 +368,14 @@
             <Text>Prueba Conexion</Text>
             <_activityFullName>BR.Core.Base.Try</_activityFullName>
           </AbstractStep>
-          <AbstractStep z:Id="i38" i:type="ExecutedStep">
+          <AbstractStep z:Id="i40" i:type="ExecutedStep">
             <Childs>
-              <AbstractStep z:Id="i39" i:type="ExecutedStep">
+              <AbstractStep z:Id="i41" i:type="ExecutedStep">
                 <Childs />
                 <Id>ff7b32ad-341c-4905-8347-08a66b1c1e1d</Id>
-                <Parent z:Ref="i38" />
+                <Parent z:Ref="i40" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i40">
+                  <PropertyValue z:Id="i42">
                     <PropertyName>Count</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>3</_expression>
@@ -392,7 +408,7 @@
         <Id>8aa5d935-8fa3-48f7-9b27-8aa177ed9f89</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i41">
+          <PropertyValue z:Id="i43">
             <PropertyName>Counter</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>3</_expression>
@@ -424,28 +440,28 @@
   <Name>main.pix</Name>
   <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <Params>
-    <Parameter z:Id="i42">
+    <Parameter z:Id="i44">
       <DefaultValueExpression>993</DefaultValueExpression>
       <Description>El puerto para el uso de la conexion de Gmail</Description>
       <Name>Puerto</Name>
       <RunnerType>Freeze</RunnerType>
       <TypeString>System.Int32</TypeString>
     </Parameter>
-    <Parameter z:Id="i43">
+    <Parameter z:Id="i45">
       <DefaultValueExpression>"samilito115@gmail.com"</DefaultValueExpression>
       <Description>Correo para la utilizacion del robot (solo prueba)</Description>
       <Name>Email</Name>
       <RunnerType>Freeze</RunnerType>
       <TypeString>System.String</TypeString>
     </Parameter>
-    <Parameter z:Id="i44">
+    <Parameter z:Id="i46">
       <DefaultValueExpression>"nspg aicb keng xbol"</DefaultValueExpression>
       <Description>contraseña segura para la utilizacion del servicio</Description>
       <Name>Contraseña</Name>
       <RunnerType>Freeze</RunnerType>
       <TypeString>System.String</TypeString>
     </Parameter>
-    <Parameter z:Id="i45">
+    <Parameter z:Id="i47">
       <DefaultValueExpression>"imap.gmail.com"</DefaultValueExpression>
       <Description>la url del servidor para poder realizar la conexion</Description>
       <Name>Servidor</Name>
