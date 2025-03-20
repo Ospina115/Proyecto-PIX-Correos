@@ -6,196 +6,270 @@
   <Logic z:Id="i2" i:type="ExecutedStep">
     <Childs>
       <AbstractStep z:Id="i3" i:type="ExecutedStep">
+        <Childs />
+        <Id>6ac000a2-a753-4394-98dc-36a729a56018</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i4">
+            <PropertyName>Port</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>Puerto</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i5">
+            <PropertyName>Server</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>Servidor</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i6">
+            <PropertyName>Email</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>Email</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i7">
+            <PropertyName>Password</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>Contraseña</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i8">
+            <PropertyName>SinceDate</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>@"20.03.2025 9:00:00"</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i9">
+            <PropertyName>ToDate</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>@"20.03.2025 12:12:12"</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i10">
+            <PropertyName>MaxItems</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>3</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i11">
+            <PropertyName>Messages</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>listacorreos</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId>0</SelectedOptionId>
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Recibe Correos</Text>
+        <_activityFullName>Activities.Email.GetIMapMailMessages</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i12" i:type="ExecutedStep">
         <Childs>
-          <AbstractStep z:Id="i4" i:type="ExecutedStep">
+          <AbstractStep z:Id="i13" i:type="ExecutedStep">
+            <Childs />
+            <Id>7dcb09f1-7898-405f-8e28-2bc0eefaa751</Id>
+            <Parent z:Ref="i12" />
+            <PropertyValues>
+              <PropertyValue z:Id="i14">
+                <PropertyName>Value</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>mail.Subject.ToString()</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+              <PropertyValue z:Id="i15">
+                <PropertyName>To</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>titulo</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>Traemos Titulo</Text>
+            <_activityFullName>BR.Core.Base.Assign</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i16" i:type="ExecutedStep">
+            <Childs />
+            <Id>22e4d504-e212-404a-9e24-1518d3206dbe</Id>
+            <Parent z:Ref="i12" />
+            <PropertyValues>
+              <PropertyValue z:Id="i17">
+                <PropertyName>Value</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>mail.From.ToString()</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+              <PropertyValue z:Id="i18">
+                <PropertyName>To</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>quien</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>Traemos Emisor</Text>
+            <_activityFullName>BR.Core.Base.Assign</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i19" i:type="ExecutedStep">
+            <Childs />
+            <Id>6d3629f6-8bf8-4d92-84b0-aa81361d9727</Id>
+            <Parent z:Ref="i12" />
+            <PropertyValues>
+              <PropertyValue z:Id="i20">
+                <PropertyName>Value</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>mail.TextBody.ToString()</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+              <PropertyValue z:Id="i21">
+                <PropertyName>To</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>cuerpo</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>Traemos Cuerpo</Text>
+            <_activityFullName>BR.Core.Base.Assign</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i22" i:type="ExecutedStep">
+            <Childs />
+            <Id>5880fff2-111e-4f5e-96e6-9e61819d1737</Id>
+            <Parent z:Ref="i12" />
+            <PropertyValues>
+              <PropertyValue z:Id="i23">
+                <PropertyName>Value</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>titulo.ToLower()</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+              <PropertyValue z:Id="i24">
+                <PropertyName>To</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>evaluar</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.Assign</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i25" i:type="ExecutedStep">
+            <Childs />
+            <Id>00c663d3-bcb0-41f4-9c18-b350fdfeb135</Id>
+            <Parent z:Ref="i12" />
+            <PropertyValues>
+              <PropertyValue z:Id="i26">
+                <PropertyName>NewFolderPath</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>@"Correos Omitidos"</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>Activities.Files.CreateFolder</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i27" i:type="ExecutedStep">
+            <Childs />
+            <Id>d555df09-01bf-46c2-932c-8cae9cead441</Id>
+            <Parent z:Ref="i12" />
+            <PropertyValues>
+              <PropertyValue z:Id="i28">
+                <PropertyName>Value</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>"DESDE:\n" + quien + "\nTITULO:\n" + titulo + "\nMENSAJE:\n" + cuerpo </_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+              <PropertyValue z:Id="i29">
+                <PropertyName>To</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>mensaje</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>Concatenamos</Text>
+            <_activityFullName>BR.Core.Base.Assign</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i30" i:type="ExecutedStep">
             <Childs>
-              <AbstractStep z:Id="i5" i:type="ExecutedStep">
-                <Childs />
-                <Id>3f220039-8d02-4095-a6ff-9752da372b70</Id>
-                <Parent z:Ref="i4" />
-                <PropertyValues>
-                  <PropertyValue z:Id="i6">
-                    <PropertyName>Text</PropertyName>
-                    <_dataType>Expression</_dataType>
-                    <_expression>"Recibiendo correos"</_expression>
-                    <_screenShotBase64 i:nil="true" />
-                    <_value i:nil="true" />
-                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                  </PropertyValue>
-                  <PropertyValue z:Id="i7">
-                    <PropertyName>Timeout</PropertyName>
-                    <_dataType>Expression</_dataType>
-                    <_expression>1</_expression>
-                    <_screenShotBase64 i:nil="true" />
-                    <_value i:nil="true" />
-                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                  </PropertyValue>
-                </PropertyValues>
-                <SelectedOptionId i:nil="true" />
-                <AutoCloseMode>None</AutoCloseMode>
-                <EnableStatus>false</EnableStatus>
-                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-                <RetryCount>-1</RetryCount>
-                <Text>notificacion</Text>
-                <_activityFullName>Activities.Interactive.MessageBox</_activityFullName>
-              </AbstractStep>
-              <AbstractStep z:Id="i8" i:type="ExecutedStep">
-                <Childs />
-                <Id>343e4cc7-4366-46a0-9cf3-9f352192f75d</Id>
-                <Parent z:Ref="i4" />
-                <PropertyValues>
-                  <PropertyValue z:Id="i9">
-                    <PropertyName>Port</PropertyName>
-                    <_dataType>Expression</_dataType>
-                    <_expression>Puerto</_expression>
-                    <_screenShotBase64 i:nil="true" />
-                    <_value i:nil="true" />
-                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                  </PropertyValue>
-                  <PropertyValue z:Id="i10">
-                    <PropertyName>Server</PropertyName>
-                    <_dataType>Expression</_dataType>
-                    <_expression>Servidor</_expression>
-                    <_screenShotBase64 i:nil="true" />
-                    <_value i:nil="true" />
-                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                  </PropertyValue>
-                  <PropertyValue z:Id="i11">
-                    <PropertyName>Email</PropertyName>
-                    <_dataType>Expression</_dataType>
-                    <_expression>Email</_expression>
-                    <_screenShotBase64 i:nil="true" />
-                    <_value i:nil="true" />
-                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                  </PropertyValue>
-                  <PropertyValue z:Id="i12">
-                    <PropertyName>Password</PropertyName>
-                    <_dataType>Expression</_dataType>
-                    <_expression>Contraseña</_expression>
-                    <_screenShotBase64 i:nil="true" />
-                    <_value i:nil="true" />
-                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                  </PropertyValue>
-                  <PropertyValue z:Id="i13">
-                    <PropertyName>SinceDate</PropertyName>
-                    <_dataType>Expression</_dataType>
-                    <_expression>@"19.03.2025 01:01:01"</_expression>
-                    <_screenShotBase64 i:nil="true" />
-                    <_value i:nil="true" />
-                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                  </PropertyValue>
-                  <PropertyValue z:Id="i14">
-                    <PropertyName>ToDate</PropertyName>
-                    <_dataType>Expression</_dataType>
-                    <_expression>@"20.03.2025 12:12:12"</_expression>
-                    <_screenShotBase64 i:nil="true" />
-                    <_value i:nil="true" />
-                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                  </PropertyValue>
-                  <PropertyValue z:Id="i15">
-                    <PropertyName>MaxItems</PropertyName>
-                    <_dataType>Expression</_dataType>
-                    <_expression>4</_expression>
-                    <_screenShotBase64 i:nil="true" />
-                    <_value i:nil="true" />
-                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                  </PropertyValue>
-                  <PropertyValue z:Id="i16">
-                    <PropertyName>Messages</PropertyName>
-                    <_dataType>Expression</_dataType>
-                    <_expression>listacorreos</_expression>
-                    <_screenShotBase64 i:nil="true" />
-                    <_value i:nil="true" />
-                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                  </PropertyValue>
-                </PropertyValues>
-                <SelectedOptionId>0</SelectedOptionId>
-                <AutoCloseMode>None</AutoCloseMode>
-                <EnableStatus>true</EnableStatus>
-                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-                <RetryCount>-1</RetryCount>
-                <Text>Recibe Correos</Text>
-                <_activityFullName>Activities.Email.GetIMapMailMessages</_activityFullName>
-              </AbstractStep>
-              <AbstractStep z:Id="i17" i:type="ExecutedStep">
+              <AbstractStep z:Id="i31" i:type="ExecutedStep">
                 <Childs>
-                  <AbstractStep z:Id="i18" i:type="ExecutedStep">
+                  <AbstractStep z:Id="i32" i:type="ExecutedStep">
                     <Childs />
-                    <Id>ac8e8eb3-4044-4928-a86c-597b1119b375</Id>
-                    <Parent z:Ref="i17" />
+                    <Id>ab75f894-5e0d-4187-8ab8-5f2fe4765d8c</Id>
+                    <Parent z:Ref="i31" />
                     <PropertyValues>
-                      <PropertyValue z:Id="i19">
-                        <PropertyName>Value</PropertyName>
+                      <PropertyValue z:Id="i33">
+                        <PropertyName>NewFolderPath</PropertyName>
                         <_dataType>Expression</_dataType>
-                        <_expression>mail.Subject.ToString()</_expression>
-                        <_screenShotBase64 i:nil="true" />
-                        <_value i:nil="true" />
-                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                      </PropertyValue>
-                      <PropertyValue z:Id="i20">
-                        <PropertyName>To</PropertyName>
-                        <_dataType>Expression</_dataType>
-                        <_expression>titulo</_expression>
-                        <_screenShotBase64 i:nil="true" />
-                        <_value i:nil="true" />
-                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                      </PropertyValue>
-                    </PropertyValues>
-                    <SelectedOptionId i:nil="true" />
-                    <AutoCloseMode>None</AutoCloseMode>
-                    <EnableStatus>true</EnableStatus>
-                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-                    <RetryCount>-1</RetryCount>
-                    <Text>Traemos Titulo</Text>
-                    <_activityFullName>BR.Core.Base.Assign</_activityFullName>
-                  </AbstractStep>
-                  <AbstractStep z:Id="i21" i:type="ExecutedStep">
-                    <Childs />
-                    <Id>deb88e7d-f1c5-499f-9aa5-09ae6d04409a</Id>
-                    <Parent z:Ref="i17" />
-                    <PropertyValues>
-                      <PropertyValue z:Id="i22">
-                        <PropertyName>Value</PropertyName>
-                        <_dataType>Expression</_dataType>
-                        <_expression>mail.TextBody.ToString()</_expression>
-                        <_screenShotBase64 i:nil="true" />
-                        <_value i:nil="true" />
-                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                      </PropertyValue>
-                      <PropertyValue z:Id="i23">
-                        <PropertyName>To</PropertyName>
-                        <_dataType>Expression</_dataType>
-                        <_expression>cuerpo</_expression>
-                        <_screenShotBase64 i:nil="true" />
-                        <_value i:nil="true" />
-                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                      </PropertyValue>
-                    </PropertyValues>
-                    <SelectedOptionId i:nil="true" />
-                    <AutoCloseMode>None</AutoCloseMode>
-                    <EnableStatus>true</EnableStatus>
-                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-                    <RetryCount>-1</RetryCount>
-                    <Text>Traemos Cuerpo</Text>
-                    <_activityFullName>BR.Core.Base.Assign</_activityFullName>
-                  </AbstractStep>
-                  <AbstractStep z:Id="i24" i:type="ExecutedStep">
-                    <Childs />
-                    <Id>97ba4dce-d2ca-4e48-858d-9a8f2a99c64f</Id>
-                    <Parent z:Ref="i17" />
-                    <PropertyValues>
-                      <PropertyValue z:Id="i25">
-                        <PropertyName>Value</PropertyName>
-                        <_dataType>Expression</_dataType>
-                        <_expression>titulo.ToLower()</_expression>
-                        <_screenShotBase64 i:nil="true" />
-                        <_value i:nil="true" />
-                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                      </PropertyValue>
-                      <PropertyValue z:Id="i26">
-                        <PropertyName>To</PropertyName>
-                        <_dataType>Expression</_dataType>
-                        <_expression>evaluar</_expression>
+                        <_expression>@$"importante {i}"</_expression>
                         <_screenShotBase64 i:nil="true" />
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -207,271 +281,177 @@
                     <ExceptionHandlingMode>Default</ExceptionHandlingMode>
                     <RetryCount>-1</RetryCount>
                     <Text></Text>
-                    <_activityFullName>BR.Core.Base.Assign</_activityFullName>
+                    <_activityFullName>Activities.Files.CreateFolder</_activityFullName>
                   </AbstractStep>
-                  <AbstractStep z:Id="i27" i:type="ExecutedStep">
-                    <Childs>
-                      <AbstractStep z:Id="i28" i:type="ExecutedStep">
-                        <Childs>
-                          <AbstractStep z:Id="i29" i:type="ExecutedStep">
-                            <Childs />
-                            <Id>b80dc1ca-93ef-4951-9ae1-7931ee0084aa</Id>
-                            <Parent z:Ref="i28" />
-                            <PropertyValues>
-                              <PropertyValue z:Id="i30">
-                                <PropertyName>NewFolderPath</PropertyName>
-                                <_dataType>Expression</_dataType>
-                                <_expression>@$"importante {i}"</_expression>
-                                <_screenShotBase64 i:nil="true" />
-                                <_value i:nil="true" />
-                                <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                              </PropertyValue>
-                            </PropertyValues>
-                            <SelectedOptionId i:nil="true" />
-                            <AutoCloseMode>None</AutoCloseMode>
-                            <EnableStatus>true</EnableStatus>
-                            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-                            <RetryCount>-1</RetryCount>
-                            <Text></Text>
-                            <_activityFullName>Activities.Files.CreateFolder</_activityFullName>
-                          </AbstractStep>
-                          <AbstractStep z:Id="i31" i:type="ExecutedStep">
-                            <Childs />
-                            <Id>4732ea9b-49ce-44c0-9499-0abbcba44be1</Id>
-                            <Parent z:Ref="i28" />
-                            <PropertyValues>
-                              <PropertyValue z:Id="i32">
-                                <PropertyName>Value</PropertyName>
-                                <_dataType>Expression</_dataType>
-                                <_expression>"TITULO:\n" + titulo + "\nMENSAJE:\n" + cuerpo </_expression>
-                                <_screenShotBase64 i:nil="true" />
-                                <_value i:nil="true" />
-                                <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                              </PropertyValue>
-                              <PropertyValue z:Id="i33">
-                                <PropertyName>To</PropertyName>
-                                <_dataType>Expression</_dataType>
-                                <_expression>mensaje</_expression>
-                                <_screenShotBase64 i:nil="true" />
-                                <_value i:nil="true" />
-                                <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                              </PropertyValue>
-                            </PropertyValues>
-                            <SelectedOptionId i:nil="true" />
-                            <AutoCloseMode>None</AutoCloseMode>
-                            <EnableStatus>true</EnableStatus>
-                            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-                            <RetryCount>-1</RetryCount>
-                            <Text>Concatenamos</Text>
-                            <_activityFullName>BR.Core.Base.Assign</_activityFullName>
-                          </AbstractStep>
-                          <AbstractStep z:Id="i34" i:type="ExecutedStep">
-                            <Childs />
-                            <Id>9e3eca68-625d-4318-98ad-7391df16cd2c</Id>
-                            <Parent z:Ref="i28" />
-                            <PropertyValues>
-                              <PropertyValue z:Id="i35">
-                                <PropertyName>FilePath</PropertyName>
-                                <_dataType>Expression</_dataType>
-                                <_expression>@$"correo {i}\informacion{i}.txt"</_expression>
-                                <_screenShotBase64 i:nil="true" />
-                                <_value i:nil="true" />
-                                <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                              </PropertyValue>
-                              <PropertyValue z:Id="i36">
-                                <PropertyName>Text</PropertyName>
-                                <_dataType>Expression</_dataType>
-                                <_expression>mensaje</_expression>
-                                <_screenShotBase64 i:nil="true" />
-                                <_value i:nil="true" />
-                                <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                              </PropertyValue>
-                            </PropertyValues>
-                            <SelectedOptionId>0</SelectedOptionId>
-                            <AutoCloseMode>None</AutoCloseMode>
-                            <EnableStatus>true</EnableStatus>
-                            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-                            <RetryCount>-1</RetryCount>
-                            <Text>Escribimos los documentos</Text>
-                            <_activityFullName>Activities.Files.WriteFile</_activityFullName>
-                          </AbstractStep>
-                          <AbstractStep z:Id="i37" i:type="ExecutedStep">
-                            <Childs />
-                            <Id>0d874034-cec4-41c8-a797-ff23b990f63c</Id>
-                            <Parent z:Ref="i28" />
-                            <PropertyValues>
-                              <PropertyValue z:Id="i38">
-                                <PropertyName>MimeMessage</PropertyName>
-                                <_dataType>Expression</_dataType>
-                                <_expression>mail</_expression>
-                                <_screenShotBase64 i:nil="true" />
-                                <_value i:nil="true" />
-                                <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                              </PropertyValue>
-                              <PropertyValue z:Id="i39">
-                                <PropertyName>Folder</PropertyName>
-                                <_dataType>Expression</_dataType>
-                                <_expression>@$"correo {i}"</_expression>
-                                <_screenShotBase64 i:nil="true" />
-                                <_value i:nil="true" />
-                                <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                              </PropertyValue>
-                              <PropertyValue z:Id="i40">
-                                <PropertyName>Count</PropertyName>
-                                <_dataType>Expression</_dataType>
-                                <_expression></_expression>
-                                <_screenShotBase64 i:nil="true" />
-                                <_value i:nil="true" />
-                                <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                              </PropertyValue>
-                            </PropertyValues>
-                            <SelectedOptionId>0</SelectedOptionId>
-                            <AutoCloseMode>None</AutoCloseMode>
-                            <EnableStatus>true</EnableStatus>
-                            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-                            <RetryCount>-1</RetryCount>
-                            <Text></Text>
-                            <_activityFullName>Activities.Email.GetAttachments</_activityFullName>
-                          </AbstractStep>
-                        </Childs>
-                        <Id>a72eef80-c3bd-420d-ae37-1c4ead4a31af</Id>
-                        <Parent z:Ref="i27" />
-                        <PropertyValues />
-                        <SelectedOptionId i:nil="true" />
-                        <AutoCloseMode>None</AutoCloseMode>
-                        <EnableStatus>true</EnableStatus>
-                        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-                        <RetryCount>-1</RetryCount>
-                        <Text></Text>
-                        <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
-                      </AbstractStep>
-                      <AbstractStep z:Id="i41" i:type="ExecutedStep">
-                        <Childs />
-                        <Id>e920b4df-94f9-48d3-876d-9e5c40eae8de</Id>
-                        <Parent z:Ref="i27" />
-                        <PropertyValues />
-                        <SelectedOptionId i:nil="true" />
-                        <AutoCloseMode>None</AutoCloseMode>
-                        <EnableStatus>true</EnableStatus>
-                        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-                        <RetryCount>-1</RetryCount>
-                        <Text></Text>
-                        <_activityFullName>BR.Core.Base.IfFalse</_activityFullName>
-                      </AbstractStep>
-                    </Childs>
-                    <Id>75fe49da-cc73-4b6c-a7c0-32ee97697b37</Id>
-                    <Parent z:Ref="i17" />
+                  <AbstractStep z:Id="i34" i:type="ExecutedStep">
+                    <Childs />
+                    <Id>c82fa509-8f63-4c5a-83d1-a8b85949594d</Id>
+                    <Parent z:Ref="i31" />
                     <PropertyValues>
-                      <PropertyValue z:Id="i42">
-                        <PropertyName>Condition</PropertyName>
+                      <PropertyValue z:Id="i35">
+                        <PropertyName>FilePath</PropertyName>
                         <_dataType>Expression</_dataType>
-                        <_expression>evaluar.Contains("hoja") | evaluar.Contains("solicitud")</_expression>
+                        <_expression>@$"importante {i}\informacion{i}.txt"</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                      <PropertyValue z:Id="i36">
+                        <PropertyName>Text</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>mensaje</_expression>
                         <_screenShotBase64 i:nil="true" />
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
                     </PropertyValues>
-                    <SelectedOptionId i:nil="true" />
+                    <SelectedOptionId>0</SelectedOptionId>
                     <AutoCloseMode>None</AutoCloseMode>
                     <EnableStatus>true</EnableStatus>
                     <ExceptionHandlingMode>Default</ExceptionHandlingMode>
                     <RetryCount>-1</RetryCount>
-                    <Text>Revisamos Prioridad</Text>
-                    <_activityFullName>BR.Core.Base.If</_activityFullName>
+                    <Text>Escribimos los documentos</Text>
+                    <_activityFullName>Activities.Files.WriteFile</_activityFullName>
+                  </AbstractStep>
+                  <AbstractStep z:Id="i37" i:type="ExecutedStep">
+                    <Childs />
+                    <Id>277c97bd-3407-426b-a404-a7bdbe92a221</Id>
+                    <Parent z:Ref="i31" />
+                    <PropertyValues>
+                      <PropertyValue z:Id="i38">
+                        <PropertyName>MimeMessage</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>mail</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                      <PropertyValue z:Id="i39">
+                        <PropertyName>Folder</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>@$"importante {i}"</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                      <PropertyValue z:Id="i40">
+                        <PropertyName>Count</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression></_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                    </PropertyValues>
+                    <SelectedOptionId>0</SelectedOptionId>
+                    <AutoCloseMode>None</AutoCloseMode>
+                    <EnableStatus>true</EnableStatus>
+                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                    <RetryCount>-1</RetryCount>
+                    <Text></Text>
+                    <_activityFullName>Activities.Email.GetAttachments</_activityFullName>
                   </AbstractStep>
                 </Childs>
-                <Id>5f9e1098-a236-45de-9f31-b1e107ca5e9c</Id>
-                <Parent z:Ref="i4" />
-                <PropertyValues>
-                  <PropertyValue z:Id="i43">
-                    <PropertyName>Collection</PropertyName>
-                    <_dataType>Expression</_dataType>
-                    <_expression>listacorreos</_expression>
-                    <_screenShotBase64 i:nil="true" />
-                    <_value i:nil="true" />
-                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                  </PropertyValue>
-                  <PropertyValue z:Id="i44">
-                    <PropertyName>Iterator</PropertyName>
-                    <_dataType>Expression</_dataType>
-                    <_expression>mail</_expression>
-                    <_screenShotBase64 i:nil="true" />
-                    <_value i:nil="true" />
-                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                  </PropertyValue>
-                  <PropertyValue z:Id="i45">
-                    <PropertyName>Counter</PropertyName>
-                    <_dataType>Expression</_dataType>
-                    <_expression>i</_expression>
-                    <_screenShotBase64 i:nil="true" />
-                    <_value i:nil="true" />
-                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                  </PropertyValue>
-                </PropertyValues>
+                <Id>70a1ca52-c021-49bc-b954-9bea4ee47f90</Id>
+                <Parent z:Ref="i30" />
+                <PropertyValues />
                 <SelectedOptionId i:nil="true" />
                 <AutoCloseMode>None</AutoCloseMode>
                 <EnableStatus>true</EnableStatus>
                 <ExceptionHandlingMode>Default</ExceptionHandlingMode>
                 <RetryCount>-1</RetryCount>
-                <Text>Lee los Datos</Text>
-                <_activityFullName>BR.Core.Base.LoopForEach</_activityFullName>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
               </AbstractStep>
-            </Childs>
-            <Id>a8407d86-a2e5-442e-938d-0d7fe716aaa6</Id>
-            <Parent z:Ref="i3" />
-            <PropertyValues />
-            <SelectedOptionId i:nil="true" />
-            <AutoCloseMode>None</AutoCloseMode>
-            <EnableStatus>true</EnableStatus>
-            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-            <RetryCount>-1</RetryCount>
-            <Text>Prueba Conexion</Text>
-            <_activityFullName>BR.Core.Base.Try</_activityFullName>
-          </AbstractStep>
-          <AbstractStep z:Id="i46" i:type="ExecutedStep">
-            <Childs>
-              <AbstractStep z:Id="i47" i:type="ExecutedStep">
-                <Childs />
-                <Id>ff7b32ad-341c-4905-8347-08a66b1c1e1d</Id>
-                <Parent z:Ref="i46" />
-                <PropertyValues>
-                  <PropertyValue z:Id="i48">
-                    <PropertyName>Count</PropertyName>
-                    <_dataType>Expression</_dataType>
-                    <_expression>3</_expression>
-                    <_screenShotBase64 i:nil="true" />
-                    <_value i:nil="true" />
-                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                  </PropertyValue>
-                </PropertyValues>
-                <SelectedOptionId>0</SelectedOptionId>
+              <AbstractStep z:Id="i41" i:type="ExecutedStep">
+                <Childs>
+                  <AbstractStep z:Id="i42" i:type="ExecutedStep">
+                    <Childs />
+                    <Id>acd73af6-a4d6-443e-9900-be16a10e381c</Id>
+                    <Parent z:Ref="i41" />
+                    <PropertyValues>
+                      <PropertyValue z:Id="i43">
+                        <PropertyName>FilePath</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>@$"Correos Omitidos\informacion{i}.txt"</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                      <PropertyValue z:Id="i44">
+                        <PropertyName>Text</PropertyName>
+                        <_dataType>Expression</_dataType>
+                        <_expression>mensaje</_expression>
+                        <_screenShotBase64 i:nil="true" />
+                        <_value i:nil="true" />
+                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                      </PropertyValue>
+                    </PropertyValues>
+                    <SelectedOptionId>0</SelectedOptionId>
+                    <AutoCloseMode>None</AutoCloseMode>
+                    <EnableStatus>true</EnableStatus>
+                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                    <RetryCount>-1</RetryCount>
+                    <Text>Escribimos los documentos</Text>
+                    <_activityFullName>Activities.Files.WriteFile</_activityFullName>
+                  </AbstractStep>
+                </Childs>
+                <Id>faff1f0a-02f0-44bd-879d-1061308acfe2</Id>
+                <Parent z:Ref="i30" />
+                <PropertyValues />
+                <SelectedOptionId i:nil="true" />
                 <AutoCloseMode>None</AutoCloseMode>
                 <EnableStatus>true</EnableStatus>
                 <ExceptionHandlingMode>Default</ExceptionHandlingMode>
                 <RetryCount>-1</RetryCount>
-                <Text>Carga del Servidor</Text>
-                <_activityFullName>BR.Core.Base.Sleep</_activityFullName>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.IfFalse</_activityFullName>
               </AbstractStep>
             </Childs>
-            <Id>a0091b4e-4518-4863-a9c0-1fb872501594</Id>
-            <Parent z:Ref="i3" />
-            <PropertyValues />
+            <Id>f273886c-017e-40c4-a5dd-077b7347288d</Id>
+            <Parent z:Ref="i12" />
+            <PropertyValues>
+              <PropertyValue z:Id="i45">
+                <PropertyName>Condition</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>evaluar.Contains("hoja") | evaluar.Contains("solicitud")</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
             <SelectedOptionId i:nil="true" />
             <AutoCloseMode>None</AutoCloseMode>
             <EnableStatus>true</EnableStatus>
             <ExceptionHandlingMode>Default</ExceptionHandlingMode>
             <RetryCount>-1</RetryCount>
-            <Text></Text>
-            <_activityFullName>BR.Core.Base.Fix</_activityFullName>
+            <Text>Revisamos Prioridad</Text>
+            <_activityFullName>BR.Core.Base.If</_activityFullName>
           </AbstractStep>
         </Childs>
-        <Id>8aa5d935-8fa3-48f7-9b27-8aa177ed9f89</Id>
+        <Id>01ae4722-60d1-4eab-8591-005779e86567</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i49">
+          <PropertyValue z:Id="i46">
+            <PropertyName>Collection</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>listacorreos</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i47">
+            <PropertyName>Iterator</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>mail</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i48">
             <PropertyName>Counter</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>3</_expression>
+            <_expression>i</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -482,38 +462,8 @@
         <EnableStatus>true</EnableStatus>
         <ExceptionHandlingMode>Default</ExceptionHandlingMode>
         <RetryCount>-1</RetryCount>
-        <Text></Text>
-        <_activityFullName>BR.Core.Base.TryFix</_activityFullName>
-      </AbstractStep>
-      <AbstractStep z:Id="i50" i:type="ExecutedStep">
-        <Childs />
-        <Id>8f4325bd-acbc-4f3d-92ec-c5531b099c03</Id>
-        <Parent z:Ref="i2" />
-        <PropertyValues>
-          <PropertyValue z:Id="i51">
-            <PropertyName>Text</PropertyName>
-            <_dataType>Expression</_dataType>
-            <_expression>"Se ha terminado el proceso"</_expression>
-            <_screenShotBase64 i:nil="true" />
-            <_value i:nil="true" />
-            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-          </PropertyValue>
-          <PropertyValue z:Id="i52">
-            <PropertyName>Timeout</PropertyName>
-            <_dataType>Expression</_dataType>
-            <_expression>1</_expression>
-            <_screenShotBase64 i:nil="true" />
-            <_value i:nil="true" />
-            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-          </PropertyValue>
-        </PropertyValues>
-        <SelectedOptionId i:nil="true" />
-        <AutoCloseMode>None</AutoCloseMode>
-        <EnableStatus>false</EnableStatus>
-        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-        <RetryCount>-1</RetryCount>
-        <Text>notificacion</Text>
-        <_activityFullName>Activities.Interactive.MessageBox</_activityFullName>
+        <Text>Lee los Datos</Text>
+        <_activityFullName>BR.Core.Base.LoopForEach</_activityFullName>
       </AbstractStep>
     </Childs>
     <Id>edb97481-5b4e-4e09-8b73-b6bceecdf649</Id>
@@ -530,28 +480,28 @@
   <Name>main.pix</Name>
   <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <Params>
-    <Parameter z:Id="i53">
+    <Parameter z:Id="i49">
       <DefaultValueExpression>993</DefaultValueExpression>
       <Description>El puerto para el uso de la conexion de Gmail</Description>
       <Name>Puerto</Name>
       <RunnerType>Freeze</RunnerType>
       <TypeString>System.Int32</TypeString>
     </Parameter>
-    <Parameter z:Id="i54">
+    <Parameter z:Id="i50">
       <DefaultValueExpression>"samilito115@gmail.com"</DefaultValueExpression>
       <Description>Correo para la utilizacion del robot (solo prueba)</Description>
       <Name>Email</Name>
       <RunnerType>Freeze</RunnerType>
       <TypeString>System.String</TypeString>
     </Parameter>
-    <Parameter z:Id="i55">
+    <Parameter z:Id="i51">
       <DefaultValueExpression>"nspg aicb keng xbol"</DefaultValueExpression>
       <Description>contraseña segura para la utilizacion del servicio</Description>
       <Name>Contraseña</Name>
       <RunnerType>Freeze</RunnerType>
       <TypeString>System.String</TypeString>
     </Parameter>
-    <Parameter z:Id="i56">
+    <Parameter z:Id="i52">
       <DefaultValueExpression>"imap.gmail.com"</DefaultValueExpression>
       <Description>la url del servidor para poder realizar la conexion</Description>
       <Name>Servidor</Name>
