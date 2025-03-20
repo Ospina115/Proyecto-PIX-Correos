@@ -305,7 +305,7 @@
                       <PropertyValue z:Id="i36">
                         <PropertyName>Condition</PropertyName>
                         <_dataType>Expression</_dataType>
-                        <_expression>titulo.Contains("hoja")</_expression>
+                        <_expression>titulo.Contains("hoja") | titulo.Contains("solicitud")</_expression>
                         <_screenShotBase64 i:nil="true" />
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
