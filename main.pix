@@ -13,7 +13,7 @@
           <PropertyValue z:Id="i4">
             <PropertyName>Port</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>Puerto</_expression>
+            <_expression>993</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -21,7 +21,7 @@
           <PropertyValue z:Id="i5">
             <PropertyName>Server</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>Servidor</_expression>
+            <_expression>"imap.gmail.com"</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -37,7 +37,7 @@
           <PropertyValue z:Id="i7">
             <PropertyName>Password</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>Contraseña</_expression>
+            <_expression>"nspg aicb keng xbol"</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -69,7 +69,7 @@
           <PropertyValue z:Id="i11">
             <PropertyName>Messages</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>listacorreos</_expression>
+            <_expression>imaplist</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -80,7 +80,7 @@
         <EnableStatus>true</EnableStatus>
         <ExceptionHandlingMode>Default</ExceptionHandlingMode>
         <RetryCount>-1</RetryCount>
-        <Text>Recibe Correos</Text>
+        <Text>Conecta con el servicio Gmaiil (IMAP)</Text>
         <_activityFullName>Activities.Email.GetIMapMailMessages</_activityFullName>
       </AbstractStep>
       <AbstractStep z:Id="i12" i:type="ExecutedStep">
@@ -101,7 +101,7 @@
               <PropertyValue z:Id="i15">
                 <PropertyName>To</PropertyName>
                 <_dataType>Expression</_dataType>
-                <_expression>titulo</_expression>
+                <_expression>subject</_expression>
                 <_screenShotBase64 i:nil="true" />
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -112,7 +112,7 @@
             <EnableStatus>true</EnableStatus>
             <ExceptionHandlingMode>Default</ExceptionHandlingMode>
             <RetryCount>-1</RetryCount>
-            <Text>Traemos Titulo</Text>
+            <Text>Mapeo y extraccion del titulo</Text>
             <_activityFullName>BR.Core.Base.Assign</_activityFullName>
           </AbstractStep>
           <AbstractStep z:Id="i16" i:type="ExecutedStep">
@@ -131,7 +131,7 @@
               <PropertyValue z:Id="i18">
                 <PropertyName>To</PropertyName>
                 <_dataType>Expression</_dataType>
-                <_expression>quien</_expression>
+                <_expression>from</_expression>
                 <_screenShotBase64 i:nil="true" />
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -142,7 +142,7 @@
             <EnableStatus>true</EnableStatus>
             <ExceptionHandlingMode>Default</ExceptionHandlingMode>
             <RetryCount>-1</RetryCount>
-            <Text>Traemos Emisor</Text>
+            <Text>Mapeo y extraccion del sujeto</Text>
             <_activityFullName>BR.Core.Base.Assign</_activityFullName>
           </AbstractStep>
           <AbstractStep z:Id="i19" i:type="ExecutedStep">
@@ -161,7 +161,7 @@
               <PropertyValue z:Id="i21">
                 <PropertyName>To</PropertyName>
                 <_dataType>Expression</_dataType>
-                <_expression>cuerpo</_expression>
+                <_expression>textbody</_expression>
                 <_screenShotBase64 i:nil="true" />
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -172,7 +172,7 @@
             <EnableStatus>true</EnableStatus>
             <ExceptionHandlingMode>Default</ExceptionHandlingMode>
             <RetryCount>-1</RetryCount>
-            <Text>Traemos Cuerpo</Text>
+            <Text>Mapeo y extraccion del cuerpo</Text>
             <_activityFullName>BR.Core.Base.Assign</_activityFullName>
           </AbstractStep>
           <AbstractStep z:Id="i22" i:type="ExecutedStep">
@@ -183,7 +183,7 @@
               <PropertyValue z:Id="i23">
                 <PropertyName>Value</PropertyName>
                 <_dataType>Expression</_dataType>
-                <_expression>titulo.ToLower()</_expression>
+                <_expression>subject.ToLower()</_expression>
                 <_screenShotBase64 i:nil="true" />
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -191,7 +191,7 @@
               <PropertyValue z:Id="i24">
                 <PropertyName>To</PropertyName>
                 <_dataType>Expression</_dataType>
-                <_expression>evaluar</_expression>
+                <_expression>texttoevaluate</_expression>
                 <_screenShotBase64 i:nil="true" />
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -202,7 +202,7 @@
             <EnableStatus>true</EnableStatus>
             <ExceptionHandlingMode>Default</ExceptionHandlingMode>
             <RetryCount>-1</RetryCount>
-            <Text></Text>
+            <Text>Validacion</Text>
             <_activityFullName>BR.Core.Base.Assign</_activityFullName>
           </AbstractStep>
           <AbstractStep z:Id="i25" i:type="ExecutedStep">
@@ -224,7 +224,7 @@
             <EnableStatus>false</EnableStatus>
             <ExceptionHandlingMode>Default</ExceptionHandlingMode>
             <RetryCount>-1</RetryCount>
-            <Text></Text>
+            <Text>Paso 43</Text>
             <_activityFullName>Activities.Files.CreateFolder</_activityFullName>
           </AbstractStep>
           <AbstractStep z:Id="i27" i:type="ExecutedStep">
@@ -235,7 +235,7 @@
               <PropertyValue z:Id="i28">
                 <PropertyName>Value</PropertyName>
                 <_dataType>Expression</_dataType>
-                <_expression>"DESDE:\n" + quien + "\nTITULO:\n" + titulo + "\nMENSAJE:\n" + cuerpo </_expression>
+                <_expression>"DESDE:\n" + from + "\nTITULO:\n" + subject + "\nMENSAJE:\n" + textbody </_expression>
                 <_screenShotBase64 i:nil="true" />
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -243,7 +243,7 @@
               <PropertyValue z:Id="i29">
                 <PropertyName>To</PropertyName>
                 <_dataType>Expression</_dataType>
-                <_expression>mensaje</_expression>
+                <_expression>messagetoprint</_expression>
                 <_screenShotBase64 i:nil="true" />
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -280,7 +280,7 @@
                     <EnableStatus>true</EnableStatus>
                     <ExceptionHandlingMode>Default</ExceptionHandlingMode>
                     <RetryCount>-1</RetryCount>
-                    <Text></Text>
+                    <Text>Creamos la Direccion</Text>
                     <_activityFullName>Activities.Files.CreateFolder</_activityFullName>
                   </AbstractStep>
                   <AbstractStep z:Id="i34" i:type="ExecutedStep">
@@ -299,7 +299,7 @@
                       <PropertyValue z:Id="i36">
                         <PropertyName>Text</PropertyName>
                         <_dataType>Expression</_dataType>
-                        <_expression>mensaje</_expression>
+                        <_expression>messagetoprint</_expression>
                         <_screenShotBase64 i:nil="true" />
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -310,7 +310,7 @@
                     <EnableStatus>true</EnableStatus>
                     <ExceptionHandlingMode>Default</ExceptionHandlingMode>
                     <RetryCount>-1</RetryCount>
-                    <Text>Escribimos los documentos</Text>
+                    <Text>Escribimos la informacion en nuevos archivos</Text>
                     <_activityFullName>Activities.Files.WriteFile</_activityFullName>
                   </AbstractStep>
                   <AbstractStep z:Id="i37" i:type="ExecutedStep">
@@ -348,7 +348,7 @@
                     <EnableStatus>true</EnableStatus>
                     <ExceptionHandlingMode>Default</ExceptionHandlingMode>
                     <RetryCount>-1</RetryCount>
-                    <Text></Text>
+                    <Text>Redireccionamos en las nuevas direcciones</Text>
                     <_activityFullName>Activities.Email.GetAttachments</_activityFullName>
                   </AbstractStep>
                 </Childs>
@@ -381,7 +381,7 @@
                       <PropertyValue z:Id="i44">
                         <PropertyName>Text</PropertyName>
                         <_dataType>Expression</_dataType>
-                        <_expression>mensaje</_expression>
+                        <_expression>messagetoprint</_expression>
                         <_screenShotBase64 i:nil="true" />
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -392,7 +392,7 @@
                     <EnableStatus>true</EnableStatus>
                     <ExceptionHandlingMode>Default</ExceptionHandlingMode>
                     <RetryCount>-1</RetryCount>
-                    <Text>Escribimos los documentos</Text>
+                    <Text>Almacenamos los Omitidos</Text>
                     <_activityFullName>Activities.Files.WriteFile</_activityFullName>
                   </AbstractStep>
                 </Childs>
@@ -414,7 +414,7 @@
               <PropertyValue z:Id="i45">
                 <PropertyName>Condition</PropertyName>
                 <_dataType>Expression</_dataType>
-                <_expression>evaluar.Contains("hoja") | evaluar.Contains("solicitud")</_expression>
+                <_expression>texttoevaluate.Contains("hoja") | texttoevaluate.Contains("solicitud")</_expression>
                 <_screenShotBase64 i:nil="true" />
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -425,7 +425,7 @@
             <EnableStatus>true</EnableStatus>
             <ExceptionHandlingMode>Default</ExceptionHandlingMode>
             <RetryCount>-1</RetryCount>
-            <Text>Revisamos Prioridad</Text>
+            <Text>Evaluamos Prioridad</Text>
             <_activityFullName>BR.Core.Base.If</_activityFullName>
           </AbstractStep>
         </Childs>
@@ -435,7 +435,7 @@
           <PropertyValue z:Id="i46">
             <PropertyName>Collection</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>listacorreos</_expression>
+            <_expression>imaplist</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -462,7 +462,7 @@
         <EnableStatus>true</EnableStatus>
         <ExceptionHandlingMode>Default</ExceptionHandlingMode>
         <RetryCount>-1</RetryCount>
-        <Text>Lee los Datos</Text>
+        <Text>Recorre cada objeto</Text>
         <_activityFullName>BR.Core.Base.LoopForEach</_activityFullName>
       </AbstractStep>
     </Childs>
@@ -481,30 +481,9 @@
   <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <Params>
     <Parameter z:Id="i49">
-      <DefaultValueExpression>993</DefaultValueExpression>
-      <Description>El puerto para el uso de la conexion de Gmail</Description>
-      <Name>Puerto</Name>
-      <RunnerType>Freeze</RunnerType>
-      <TypeString>System.Int32</TypeString>
-    </Parameter>
-    <Parameter z:Id="i50">
       <DefaultValueExpression>"samilito115@gmail.com"</DefaultValueExpression>
       <Description>Correo para la utilizacion del robot (solo prueba)</Description>
       <Name>Email</Name>
-      <RunnerType>Freeze</RunnerType>
-      <TypeString>System.String</TypeString>
-    </Parameter>
-    <Parameter z:Id="i51">
-      <DefaultValueExpression>"nspg aicb keng xbol"</DefaultValueExpression>
-      <Description>contraseña segura para la utilizacion del servicio</Description>
-      <Name>Contraseña</Name>
-      <RunnerType>Freeze</RunnerType>
-      <TypeString>System.String</TypeString>
-    </Parameter>
-    <Parameter z:Id="i52">
-      <DefaultValueExpression>"imap.gmail.com"</DefaultValueExpression>
-      <Description>la url del servidor para poder realizar la conexion</Description>
-      <Name>Servidor</Name>
       <RunnerType>Freeze</RunnerType>
       <TypeString>System.String</TypeString>
     </Parameter>
